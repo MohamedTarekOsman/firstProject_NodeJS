@@ -35,9 +35,52 @@ yargs.command({
       type: "string",
       demandOption: false,
     },
+    sub1: {
+      describe: "add phone",
+      type: "number",
+      demandOption: false,
+    },
+    sub2: {
+      describe: "add phone",
+      type: "number",
+      demandOption: false,
+    },
+    sub3: {
+      describe: "add phone",
+      type: "number",
+      demandOption: false,
+    },
+    sub4: {
+      describe: "add phone",
+      type: "number",
+      demandOption: false,
+    },
+    sub5: {
+      describe: "add phone",
+      type: "number",
+      demandOption: false,
+    },
+    sub6: {
+      describe: "add phone",
+      type: "number",
+      demandOption: false,
+    },
   },
   handler: (x) => {
-    data.addperson(x.id,x.fname,x.lname,x.age,x.city,x.phone);
+    data.addperson(
+      x.id,
+      x.fname,
+      x.lname,
+      x.age,
+      x.city,
+      x.phone,
+      x.sub1,
+      x.sub2,
+      x.sub3,
+      x.sub4,
+      x.sub5,
+      x.sub6,
+    );
   },
 });
 

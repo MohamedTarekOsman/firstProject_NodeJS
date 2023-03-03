@@ -1,35 +1,47 @@
 const fs=require("fs")
-const allData=require("./allData")
-
-
 
 //add 
-const addperson=(id, fname, lname, age , city,phone)=>{
-   //1 
-    const alldata=getdata();
+const addperson = (
+  id,
+  fname,
+  lname,
+  age,
+  city,
+  phone,
+  sub1,
+  sub2,
+  sub3,
+  sub4,
+  sub5,
+  sub6
+) => {
+  //1
+  const alldata = getdata();
+  let sum1 = sub1+sub2+sub3+sub4+sub5+sub6;
+  let avg = sum1/6;
 
-    //prevent duplicated id
-    const dublicatedID=alldata.filter((i)=>i.id===id);
-    if(dublicatedID.length == 0)
-    {
-        //3
-        alldata.push({
-        id,
-        fname,
-        lname,
-        age,
-        city,
-        phone
-    })
-}else{
-    console.log("error id number ( " + id +" ) is already taken");
+  //prevent duplicated id
+  const dublicatedID = alldata.filter((i) => i.id === id);
+  if (dublicatedID.length == 0) {
+    //3
+    alldata.push({
+      id,
+      fname,
+      lname,
+      age,
+      city,
+      phone,
+      sum1,
+      avg,
+    });
+  } else {
+    console.log("error id number ( " + id + " ) is already taken");
     //console.log(dublicatedID)
-}
+  }
 
-    //4
-    savedata(alldata);
-
-}
+  //4
+  savedata(alldata);
+};
 //delete 
 const delperson = (id)=>{
   //1
